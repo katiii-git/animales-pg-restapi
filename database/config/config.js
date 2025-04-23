@@ -1,5 +1,5 @@
 require('dotenv').config()
-const fs=require("fs");
+
 module.exports={
   development: {
     url: process.env.DEV_DATABASE_URL,
@@ -11,7 +11,7 @@ module.exports={
      dialect: "postgres",
   },
   production: {
-     url: process.env.DATABASE_URL || process.env.DEV_DATABASE_URL,
+     url: process.env.DATABASE_URL,
      dialect: "postgres",
   },
 }
